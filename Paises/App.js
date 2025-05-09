@@ -6,12 +6,12 @@ import Pais from './src/components/Pais';
 export default function App() {
   const [busqueda, guardarbusqueda] = useState({pais: ''});
   const [consultar, guardarconsultar] = useState(false);
-  const [resultado, guardarresultado] = useState(null); // Cambiado a null inicialmente
+  const [resultado, guardarresultado] = useState(null); 
 
   useEffect(() => {
     const { pais } = busqueda;
     const consultarPais = async () => {
-      if(consultar && pais) { // Asegurarse que haya un país seleccionado
+      if(consultar && pais) { 
         const url = `https://servicodados.ibge.gov.br/api/v1/paises/${pais}`;
         try {
           const respuesta = await fetch(url);
@@ -43,7 +43,7 @@ export default function App() {
             guardarconsultar={guardarconsultar}
           />
         </View>
-        {/* Solo mostrar Pais si hay resultados */}
+       
         {resultado && (
           <View style={{ zIndex: 1 }}>
             <Pais resultado={resultado} />
