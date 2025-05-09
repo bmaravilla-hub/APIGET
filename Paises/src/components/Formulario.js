@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontWeight: "bold",
     textTransform: "uppercase",
-    fontSize: 18,
+    fontSize: 19,
   },
 });
 
