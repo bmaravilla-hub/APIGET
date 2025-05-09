@@ -14,10 +14,9 @@ const Pais = ({ resultado }) => {
 
   useEffect(() => {
     if (resultado && Object.keys(resultado).length > 0) {
-      // Extraer el primer país del resultado (la API devuelve un objeto)
+      
       const paisData = Object.values(resultado)[0];
       
-      // Extraer las lenguas
       const lenguas = paisData.linguas ? 
         Object.values(paisData.linguas).map(l => l.nome) : 
         ["No disponible"];
